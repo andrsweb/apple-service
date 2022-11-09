@@ -15,21 +15,19 @@ $container-xl: 1200px;
 $container-padding: 24px;
 
 // Font families.
-$ff			: Arial, sans-serif;
-$ff-title	: Arial, sans-serif;
+$ff			: 'Mazzard H', Arial, sans-serif;
 
 // Font sizes.
 $fs-xs	: 12px;
-$fs-sm	: 14px;
-$fs-md	: 16px;
-$fs-lg	: 18px;
-$fs-xl	: 20px;
+$fs-sm	: 15px;
+$fs-md	: 20px;
+$fs-lg	: 30px;
+$fs-xl	: 36px;
 
 // Font weights.
 $fw-light	: 300;
 $fw-regular	: 400;
 $fw-medium	: 500;
-$fw-semibold: 600;
 $fw-bold	: 700;
 
 // Line heights.
@@ -39,6 +37,12 @@ $lh-title	: 1.3;
 // Colors.
 $white	: #FFFFFF;
 $black	: #000000;
+$main   : #FBFBFF;
+$cult   : #EFEFEF;
+$silv   : #808A9F;
+$jet    : #343434;
+$accent : #FCFC62;
 
 // Others.
 $tr: 0.35s;
+$op: 0.7;
