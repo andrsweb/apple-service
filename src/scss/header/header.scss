@@ -130,6 +130,26 @@
 		line-height: 60px;
 		text-decoration:none;
 		text-transform: capitalize;
+		position: relative;
+
+		&:hover::before {
+			transform: rotate(0);
+			border-right: 0;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 70%;
+			right: 50%;
+			width: 5px;
+			height: 5px;
+			border-right: 3px solid $jet;
+			border-bottom: 3px solid $jet;
+			transform: rotate( 45deg )
+						translateX( 50% );
+			transition: all ease $tr;
+		}
 	}
 
 	&-contacts {
