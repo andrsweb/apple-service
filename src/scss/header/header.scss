@@ -3,7 +3,29 @@
 	background: $cult;
 
 
-	&-menu {
+	&-menu {}
+
+	&-submenu-links {
+		padding: 5px;
+		background: $main;
+		position: absolute;
+		display: flex;
+		top: 120%;
+		right: 52%;
+		transform: translateX( 50% );
+		border-radius: 5px;
+		box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+	}
+
+	&-submenu-link {
+		margin-right: 20px;
+		font-size: 20px;
+		white-space: nowrap;
+		color: $jet;
+
+		&:last-child {
+			margin-right: 0;
+		}
 	}
 
 	&-logo {
@@ -39,7 +61,6 @@
 	}
 
 	&-inner {
-		
 	}
 
 	&-submenu {
@@ -85,6 +106,7 @@
 			}
 
 			&.has-children {
+				z-index: 10;
 				ul {
 					padding: 20px;
 					background: $cult;
@@ -129,7 +151,6 @@
 		font-size:20px;
 		line-height: 60px;
 		text-decoration:none;
-		text-transform: capitalize;
 		position: relative;
 
 		&:hover::before {
