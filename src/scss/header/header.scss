@@ -81,7 +81,6 @@
 			margin-right: 5%;
 		}
 
-
 		img {
 			width: 50%;
 			position: absolute;
@@ -252,7 +251,7 @@
 	}
 
 	&-menu-list {
-		display: none; //
+		display: none;
 		justify-content: center;
 		align-items: center;
 
@@ -423,6 +422,5 @@
 		@media all and (min-width: $xl) {
 			font-size: 20px;
 		}
-
 	}
 }
