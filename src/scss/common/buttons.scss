@@ -15,6 +15,17 @@
     z-index: 1;
     border-radius: 5px;
 
+    @media all and (min-width: $md) {
+        font-size: 12px;
+        padding: 5px 15px;
+    }
+
+    @media all and (min-width: $xl) {
+        font-size: 15px;
+        padding: 10px 30px;
+    }
+
+
     &:after {
         content: "";
         position: absolute;
@@ -44,6 +55,10 @@
     position: relative;
     cursor: pointer;
     transition: opacity ease $tr;
+
+    @media all and (min-width: $md) {
+        display: none;
+    }
 
     &:hover {
         opacity: $op;

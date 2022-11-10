@@ -1,20 +1,41 @@
 .header {
-	padding: 15px 0;
+	padding: 20px 0;
 	background: $cult;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	z-index: 100;
+	transition: box-shadow ease $tr,
+				padding ease $tr;
 
+		&.scrolled {
+			box-shadow: 1px 1px 6px 1px #f3ececef;
+			padding: 4px 0;
 
-	&-menu {}
+			@media all and (min-width: $md) {
+				padding: 15px;
+			}
+		}
+
+	.container {
+		max-width: 1200px;
+	}
 
 	&-submenu-links {
 		padding: 5px;
 		background: $main;
 		position: absolute;
-		display: none; //
+		display: none;
 		top: 120%;
 		right: 52%;
 		transform: translateX( 50% );
 		border-radius: 5px;
 		box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+		@media all and (min-width: $md) {
+			display: flex;;
+		}
 	}
 
 	&-submenu-link {
@@ -22,6 +43,18 @@
 		font-size: 20px;
 		white-space: nowrap;
 		color: $jet;
+
+		@media all and (min-width: $md) {
+			font-size: 12px;
+		}
+
+		@media all and (min-width: 900px) {
+			font-size: 15px;
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 15px;
+		}
 
 		&:last-child {
 			margin-right: 0;
@@ -36,6 +69,19 @@
 		cursor: pointer;
 		transition: opacity ease $tr;
 
+		@media all and (min-width: $md) {
+			margin-right: 20px;
+		}
+
+		@media all and (min-width: $lg) {
+			margin-right: 10%;
+		}
+
+		@media all and (min-width: $xl) {
+			margin-right: 5%;
+		}
+
+
 		img {
 			width: 50%;
 			position: absolute;
@@ -43,19 +89,41 @@
 			right: 50%;
 			transform: translate( 50%,-50%);
 			opacity: 0.5;
+
+			@media all and (min-width: $md) {
+				width: 70%;
+			}
+
+			@media all and (min-width: $lg) {
+				width: 80%;
+			}
 		}
 	}
 
 	&-logo-text {
-		font-size: 12px; //
+		font-weight: $fw-bold;
+		font-size: 12px;
 		background: $cult;
 		line-height: 1;
 		z-index: 1;
+		white-space: nowrap;
+
+		@media all and (min-width: 900px) {
+			font-size: 15px;
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 15px;
+		}
 	}
 
 	&-wrapper {
 		display: flex;
 		justify-content: space-between;
+
+		@media all and (min-width: $md) {
+			position: relative;
+		}
 	}
 
 	&-menu-wrapper {
@@ -64,20 +132,28 @@
 		align-items: center;
 		justify-content: space-between;
 		position: relative;
-		top: 60px;
 		opacity: 0;
 
+		@media all and (min-width: $md) {
+			opacity: 1;
+			position: static;
+			width: 100%;
+		}
+
 		&.opened {
+			padding: 20px 0;
 			transition: opacity ease $tr;
 			opacity: 1;
 			position: fixed;
 			right: 0;
-			top: 60px;
-			background: $silv;
+			top: 70px;
+			background: rgb(230, 228, 228);
 			width: 70%;
-			height: calc( 100% - 60px);
+			height: calc( 100% - 70px);
 			justify-content: center;
 			align-items: flex-start;
+			box-shadow:  0 0 10px 0 $black;
+			border-radius: 5px;
 
 			.header-menu-list {
 				width: 100%;
@@ -109,26 +185,20 @@
 				}
 			}
 
-			.header-inner {
-				display: flex;
-				justify-content: center;
-				order: 2;
-			}
-
 			.header-work {
 				display: flex;
-				font-size: 14px;
+				font-size: 15px;
 				margin-top: 20px;
 			}
 
 			.header-contacts {
 				display: flex;
-				order: 1;
 				margin-bottom: 40px;
 				width: 100%;
 
 				&-phone {
 					text-align: center;
+					font-size: 20px;
 				}
 			}
 
@@ -141,7 +211,6 @@
 				background: transparent;
 				box-shadow: none;
 				align-items: center;
-				order: 3;
 			}
 
 			.header-submenu-link {
@@ -150,16 +219,11 @@
 				width: 100%;
 				margin: 0 0 10px 0;
 			}
-		}
-		.header-submenu {
-			display: none;
-		}
-	}
 
-	&-inner {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
+			.header-submenu {
+				display: none;
+			}
+		}
 	}
 
 	&-submenu {
@@ -174,6 +238,11 @@
 
 		li {
 			width: 14%;
+			font-size: 10px;
+
+			@media all and (min-width: $lg) {
+				font-size: 15px;
+			}
 		}
 	}
 
@@ -182,11 +251,19 @@
 		justify-content: center;
 		align-items: center;
 
+		@media all and (min-width: $md) {
+			display: flex;
+		}
+
 		&-item {
 			display: flex;
 			margin-right: 20px;
 			color: $jet;
 			white-space: nowrap;
+
+			@media all and (min-width: $lg) {
+				margin-right: 30px;
+			}
 
 			&:nth-child(3) .header-submenu {
 				li {
@@ -225,6 +302,11 @@
 					justify-content: center;
 					margin-bottom: 10px;
 					margin-right: 0;
+					font-size: 12px;
+
+					@media all and (min-width: $lg) {
+						font-size: 15px;
+					}
 
 					&:last-child {
 						margin-bottom: 0;
@@ -253,6 +335,23 @@
 		text-decoration:none;
 		position: relative;
 
+		@media all and (min-width: $md) {
+			font-size: 12px;
+		}
+
+		@media all and (min-width: 900px) {
+			font-size: 15px;
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 15px;
+		}
+
+		@media all and (min-width: $xl) {
+			font-size: 20px;
+		}
+
+
 		&:hover::before {
 			transform: rotate(0);
 			border-right: 0;
@@ -275,11 +374,50 @@
 
 	&-contacts {
 		position: relative;
-		display: none; //
+		display: none;
 		flex-direction: column;
+
+		@media all and (min-width: $md) {
+			display: flex;
+		}
+	}
+
+	&-contacts-phone {
+		font-size: 12px;
+
+		@media all and (min-width: 900px) {
+			font-size: 15px;
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 15px;
+		}
+
+		@media all and (min-width: $xl) {
+			font-size: 20px;
+		}
+
 	}
 
 	.header-work {
-		display: none; //
+		display: none;
+
+		@media all and (min-width: $md) {
+			display: flex;
+			font-size: 12px;
+		}
+
+		@media all and (min-width: 900px) {
+			font-size: 15px;
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 15px;
+		}
+
+		@media all and (min-width: $xl) {
+			font-size: 20px;
+		}
+
 	}
 }
