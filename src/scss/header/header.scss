@@ -107,6 +107,11 @@
 		line-height: 1;
 		z-index: 1;
 		white-space: nowrap;
+		color: $silv;
+
+		span {
+			color: $accent;
+		}
 
 		@media all and (min-width: 900px) {
 			font-size: 15px;
