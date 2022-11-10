@@ -7,6 +7,7 @@ h3, .h3 {
 }
 
 h1, .h1 {
+	font-family: $ff;
 	font-size: 24px;
 	text-align: center;
 	margin-bottom: 40px;
@@ -17,8 +18,10 @@ h1, .h1 {
 }
 
 h2, .h2 {
+	font-family: $ff;
 	font-size: 24px;
-	margin-bottom: 25px;
+	margin-bottom: 40px;
+	text-align: center;
 
 	@media all and (min-width: $lg) {
 		font-size: 25px
