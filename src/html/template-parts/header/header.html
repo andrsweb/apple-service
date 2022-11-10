@@ -21,34 +21,43 @@
 		<header class="header">
 			<div class="container">
 				<div class="header-wrapper">
-					<ul class="header-submenu-links">
-						<li class="header-submenu-link">
-							<a href="">Выезд мастера</a> </li>
-						<li class="header-submenu-link">
-							<a href="">Акции</a></li>
-						<li class="header-submenu-link">
-							<a href="">О компании</a> </li>
-						<li class="header-submenu-link">
-							<a href="">Контакты</a> </li>
-					</ul>
 					<a class="header-logo">
 						<p class="header-logo-text">
 							Сервисный центр <br> Apple в Москве
 						</p>
 						<img src="img/header/logo.png" width="85" height="85" alt="">
 					</a>
-					<div class="header-inner">
-					@@include( 'header-nav.html')
+					<div class="header-menu-wrapper">
+						<ul class="header-submenu-links">
+							<li class="header-submenu-link">
+								<a href="">Выезд мастера</a>
+							</li>
+							<li class="header-submenu-link">
+								<a href="">Акции</a>
+							</li>
+							<li class="header-submenu-link">
+								<a href="">О компании</a>
+							</li>
+							<li class="header-submenu-link">
+								<a href="">Контакты</a>
+							</li>
+						</ul>
+						<div class="header-inner">
+						@@include( 'header-nav.html')
+						</div>
+						<p class="header-work">
+							Работаем с 9-00 до 22-00
+						</p>
+						<div class="header-contacts">
+							<a href="tel:84957977375" class="header-contacts-phone">8 (495) 797-73-75</a>
+							<a href="tel:88007777375" class="header-contacts-phone">8 (800) 777-73-75</a>
+							<button class="header-button">
+								Обратный звонок
+							</button>
+						</div>
 					</div>
-					<p class="header-work">
-						Работаем с 9-00 до 22-00
-					</p>
-					<div class="header-contacts">
-						<a href="tel:84957977375" class="header-contacts-phone">8 (495) 797-73-75</a>
-						<a href="tel:88007777375" class="header-contacts-phone">8 (800) 777-73-75</a>
-						<button class="header-button">
-							Обратный звонок
-						</button>
+					<div class="burger-button">
+						<span></span>
 					</div>
 				</div>
 			</div>

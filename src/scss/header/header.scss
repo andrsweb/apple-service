@@ -9,7 +9,7 @@
 		padding: 5px;
 		background: $main;
 		position: absolute;
-		display: flex;
+		display: none; //
 		top: 120%;
 		right: 52%;
 		transform: translateX( 50% );
@@ -37,6 +37,7 @@
 		transition: opacity ease $tr;
 
 		img {
+			width: 50%;
 			position: absolute;
 			top: 40%;
 			right: 50%;
@@ -46,7 +47,7 @@
 	}
 
 	&-logo-text {
-		font-size: 14px;
+		font-size: 12px; //
 		background: $cult;
 		line-height: 1;
 		z-index: 1;
@@ -54,13 +55,108 @@
 
 	&-wrapper {
 		display: flex;
+		justify-content: space-between;
+	}
+
+	&-menu-wrapper {
+		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 		position: relative;
+		top: 60px;
+
+		&.opened {
+			position: fixed;
+			right: 0;
+			top: 60px;
+			background: $accent;
+			width: 70%;
+			height: calc( 100% - 60px);
+			justify-content: center;
+			align-items: flex-start;
+
+			.header-menu-list {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.header-menu-list-item.has-children {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				margin: 0;
+				height: auto;
+			}
+
+			.header-menu {
+				width: 100%;
+			}
+
+			.header-menu-link {
+				font-size: 20px;
+				position: static;
+				line-height: $lh;
+				width: 100%;
+				margin-bottom: 10px;
+
+				&::before {
+					display: none;
+				}
+			}
+
+			.header-inner {
+				display: flex;
+				justify-content: center;
+				order: 2;
+			}
+
+			.header-work {
+				display: flex;
+				font-size: 14px;
+				margin-top: 20px;
+			}
+
+			.header-contacts {
+				display: flex;
+				order: 1;
+				margin-bottom: 40px;
+				width: 100%;
+
+				&-phone {
+					text-align: center;
+				}
+			}
+
+			.header-submenu-links {
+				display: flex;
+				flex-direction: column;
+				position: static;
+				width: 100%;
+				transform: translateX(0);
+				background: transparent;
+				box-shadow: none;
+				align-items: center;
+				order: 3;
+			}
+
+			.header-submenu-link {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				margin: 0 0 10px 0;
+			}
+		}
+		.header-submenu {
+			display: none;
+		}
 	}
 
 	&-inner {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
 	}
 
 	&-submenu {
@@ -79,7 +175,7 @@
 	}
 
 	&-menu-list {
-		display: flex;
+		display: none; //
 		justify-content: center;
 		align-items: center;
 
@@ -107,6 +203,7 @@
 
 			&.has-children {
 				z-index: 10;
+
 				ul {
 					padding: 20px;
 					background: $cult;
@@ -175,7 +272,11 @@
 
 	&-contacts {
 		position: relative;
-		display: flex;
+		display: none; //
 		flex-direction: column;
+	}
+
+	.header-work {
+		display: none; //
 	}
 }
