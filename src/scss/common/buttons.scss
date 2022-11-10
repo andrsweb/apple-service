@@ -5,11 +5,13 @@
     border: 1px solid $jet;
     border-radius: 4px;
     cursor: pointer;
-    transition: opacity ease $tr;
-    background: $silv;
+    background: $white;
+    transition: background ease $tr,
+                    color ease $tr;
 
     &:hover {
-        opacity: $op;
+        background: $jet;
+        color: $white;
     }
 }
 

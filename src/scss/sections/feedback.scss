@@ -1,0 +1,16 @@
+.feedback {
+    display: flex;
+    align-items: center;
+    margin: 40px auto 0 auto;
+
+    &-inner-left {
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+    }
+
+    .feedback-link {
+        font-family: $ff;
+        font-size: 25px;
+    }
+}
