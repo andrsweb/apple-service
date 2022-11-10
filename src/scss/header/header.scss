@@ -65,12 +65,15 @@
 		justify-content: space-between;
 		position: relative;
 		top: 60px;
+		opacity: 0;
 
 		&.opened {
+			transition: opacity ease $tr;
+			opacity: 1;
 			position: fixed;
 			right: 0;
 			top: 60px;
-			background: $accent;
+			background: $silv;
 			width: 70%;
 			height: calc( 100% - 60px);
 			justify-content: center;
