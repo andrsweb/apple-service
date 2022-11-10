@@ -1,3 +1,20 @@
 .hero {
-    padding-top: 200px;
+    padding: 100px 0 40px;
+
+    @media all and (min-width: $md) {
+		padding: 200px 0 40px;
+	}
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .hero-subtext {
+        text-align: center;
+        font-size: 14px;
+
+        @media all and (min-width: $md) {
+            font-size: 16px;
+        }
+    }
 }
