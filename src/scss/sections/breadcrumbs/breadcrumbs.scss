@@ -1,0 +1,18 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+
+    .main, .current {
+        color: $jet;
+        font-size: 12px;
+    }
+
+    .arrow {
+        margin: 0 3px;
+        width: 7px;
+        height: 7px;
+        border-right: 3px solid $jet;
+        border-bottom: 3px solid $jet;
+        transform: rotate( -45deg );
+    }
+}
