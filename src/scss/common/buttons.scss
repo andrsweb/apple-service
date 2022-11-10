@@ -5,7 +5,12 @@
     border: 1px solid $jet;
     border-radius: 4px;
     cursor: pointer;
-    transition: opacity ease 1.5s;
+    transition: opacity ease $tr;
+    background: $silv;
+
+    &:hover {
+        opacity: $op;
+    }
 }
 
 .header-button {
