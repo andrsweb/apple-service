@@ -1,5 +1,5 @@
 .change-glass {
-	padding: 50px 0;
+	padding: 20px 0; //50
 
 	.container {
 		max-width: 1200px;
@@ -13,12 +13,20 @@
 
 	&-item {
 		padding: 0 10px;
-		width: calc( 100% / 4 );
+		width: calc( 100% / 1 );
 		margin-bottom: 30px;
 		transition: opacity ease $tr;
 
-		&:hover {
+		@media all and (min-width: $sm) {
+			width: calc( 100% / 2);
+		}
 
+		@media all and (min-width: $md) {
+			width: calc( 100% / 4 );
+		}
+
+		&:hover {
+			opacity: $op;
 		}
 
 		&-inner {
