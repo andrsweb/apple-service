@@ -107,10 +107,10 @@
 		line-height: 1;
 		z-index: 1;
 		white-space: nowrap;
-		color: $silv;
+		color: rgb(71, 69, 69);
 
 		span {
-			color: $accent;
+			color: rgb(122, 122, 122);
 		}
 
 		@media all and (min-width: 900px) {
