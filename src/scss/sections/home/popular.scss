@@ -8,10 +8,11 @@
     &-item {
         display: flex;
         flex-direction: column;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
 
         @media all and (min-width: $md) {
             flex-direction: row;
+            margin-bottom: 50px;
         }
 
         &:last-child {
