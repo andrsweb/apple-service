@@ -1,0 +1,15 @@
+<section class="stat">
+	<div class="container">
+		<h2>Статистика по ремонту техники Apple</h2>
+		<div class="swiper">
+			<div class="swiper-wrapper stat-wrapper">
+			@@loop( 'stat-slide.html', [
+				{ 'title': 'iPhone', 'img': 'img/slide/iphone.png', 'diag': 'img/slide/diagiphone.png'},
+				{ 'title': 'iPad', 'img': 'img/slide/ipad.png', 'diag': 'img/slide/diagipad.png'},
+				{ 'title': 'MacBook', 'img': 'img/slide/mac.png', 'diag': 'img/slide/diagmac.png'}
+			] )
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+</section>
