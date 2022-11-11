@@ -1,0 +1,45 @@
+.service-area {
+    padding: 20px 0;
+
+    @media all and (min-width: $md) {
+        padding: 50px 0;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &-wrapper {
+        position: relative;
+    }
+    &-img {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate( 50%, -50% );
+        z-index: -1;
+        filter: grayscale(70%);
+        opacity: 0.2;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-text {
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 20px;
+        font-size: 13px;
+
+        @media all and (min-width: $md) {
+            font-size: 15px;
+        }
+
+        &:last-child {
+            font-weight: $fw-bold;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+    }
+}
