@@ -1,0 +1,49 @@
+.accessories {
+    padding: 10px 0;
+
+    @media all and (min-width: $md) {
+        padding: 50px 0;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &-text {
+        font-weight: $fw-bold;
+        font-size: 14px;
+        margin-bottom: 10px;
+        text-align: center;
+
+        @media all and (min-width: $md) {
+            font-size: 15px;
+            text-align: left;
+        }
+    }
+
+    &-list {}
+
+    &-item {
+        font-size: 13px;
+        margin-bottom: 20px;
+        position: relative;
+        padding-left: 20px;
+
+        @media all and (min-width: $md) {
+            font-size: 15px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY( -50% );
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $jet;
+        }
+    }
+}
