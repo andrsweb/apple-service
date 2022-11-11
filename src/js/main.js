@@ -4,4 +4,4 @@ import './common/common'
 
 import './header/header'
 import './header/form'
-import './popular';
+import './stat-slides';
