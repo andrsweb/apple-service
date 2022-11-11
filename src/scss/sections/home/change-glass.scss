@@ -1,6 +1,10 @@
 .change-glass {
 	padding: 20px 0; //50
 
+	@media all and (min-width: $md) {
+		padding: 50px 0;
+	}
+
 	.container {
 		max-width: 1200px;
 	}
