@@ -23,7 +23,7 @@ body {
 
 img {
 	max-width: 100%;
-	height: auto
+	height: auto;
 }
 
 ul {
@@ -34,6 +34,11 @@ ul {
 
 a {
 	color: $jet;
+}
+
+picture {
+	display: flex;
+	justify-content: center;
 }
 
 .wrapper {
