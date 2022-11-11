@@ -1,10 +1,12 @@
 .breadcrumbs {
     display: flex;
     align-items: center;
+    margin-bottom: 50px;
 
     .main, .current {
         color: $jet;
         font-size: 12px;
+        cursor: pointer;
     }
 
     .arrow {

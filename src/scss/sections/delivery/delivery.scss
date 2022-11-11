@@ -1,0 +1,171 @@
+.master {
+    padding: 100px 0 40px; // 150 0 40;
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &-text {
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &-table {
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        background: $silv;
+        margin-bottom: 40px;
+    }
+
+    &-row-name {
+        display: flex;
+        margin-bottom: 20px;
+
+        color: $jet;
+        font-weight: $fw-bold;
+    }
+
+    &-col-name {
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+
+        @media all and (min-width: $m) {
+            font-size: 18px;
+        }
+
+        @media all and (min-width: $lg) {
+            font-size: 24px;
+        }
+
+        &:first-child {
+            width: 50%;
+        }
+
+        &:last-child {
+            width: 50%;
+        }
+    }
+
+    &-row {
+        display: flex;
+        margin-bottom: 10px;
+
+        &:nth-child(2n + 1) {
+            color: $main;
+        }
+    }
+
+    &-col {
+        display: flex;
+        justify-content: center;
+        font-size: 10px;
+
+        @media all and (min-width: $m) {
+            font-size: 14px;
+        }
+
+        @media all and (min-width: $lg) {
+            font-size: 18px;
+        }
+
+        &:first-child {
+            width: 50%;
+        }
+
+        &:last-child {
+            width: 50%;
+        }
+
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-list-img {
+        margin-bottom: 20px;
+    }
+
+    &-item {
+        font-size: 13px;
+        font-weight: $fw-medium;
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 20px;
+
+        @media all and (min-width: $lg) {
+            font-size: 20px;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY( -50% );
+            width: 15px;
+            height: 15px;
+            background: $jet;
+            border-radius: 5px;
+        }
+    }
+}
+
+.why {
+    padding: 20px 0;
+
+    @media all and (min-width: $md) {
+        padding: 50px 0;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &-text {
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 20px;
+
+        @media all and (min-width: $md) {
+            font-size: 20px;
+        }
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-list-item {
+        font-size: 13px;
+        font-weight: $fw-medium;
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 20px;
+
+        @media all and (min-width: $lg) {
+            font-size: 20px;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY( -50% );
+            width: 15px;
+            height: 15px;
+            background: $jet;
+            border-radius: 5px;
+        }
+    }
+}
