@@ -1,0 +1,68 @@
+.sales {
+    padding: 150px 0 40px;
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &-complex-wrapper {
+        padding: 20px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.027);
+        display: flex;
+        flex-direction: column;
+
+        @media all and (min-width: $md) {
+            flex-direction: row;
+        }
+    }
+
+    &-complex-img {
+        width: 100%;
+
+        @media all and (min-width: $md) {
+            width: 50%;
+        }
+    }
+
+    &-complex-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+
+        @media all and (min-width: $md) {
+            width: 50%;
+        }
+    }
+
+    &-complex-text {
+        font-size: 15px;
+        margin: 20px 0;
+        text-align: center;
+
+        @media all and (min-width: $md) {
+            font-size: 20px;
+            text-align: left;
+        }
+    }
+
+    &-complex-item {
+        position: relative;
+        font-size: 16px;
+        padding-left: 20px;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY( -50% );
+            width: 15px;
+            height: 15px;
+            background: $jet;
+            border-radius: 5px;
+        }
+    }
+}
