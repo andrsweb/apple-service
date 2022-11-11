@@ -1,5 +1,9 @@
 .stat {
-	padding: 50px 0;
+	padding: 20px 0;
+
+	@media all and (min-width: $md) {
+		padding: 50px 0;
+	}
 
 	.container {
 		max-width: 1200px;
@@ -7,37 +11,82 @@
 
 	&-slide-wrapper {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		margin-bottom: 50px;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
 	}
 
 	&-slide-img {
-		width: 30%;
+		width: 100%;
+
+		@media all and (min-width: $md) {
+			width: 30%;
+		}
 
 		img {
-			width: 100%
-		};
+			width: 70%;
+
+			@media all and (min-width: $sm) {
+				width: 45%;
+			}
+
+			@media all and (min-width: $md) {
+				width: 100%;
+			}
+		}
 	}
 
 	&-slide-diag {
-		width: 50%;
+		width: 100%; //50
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		@media all and (min-width: $md) {
+			width: 50%;
+		}
 	}
 
 	&-slide-text-wrapper {
-		width: 20%;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		margin-bottom: 20px;
+
+		@media all and (min-width: $md) {
+			width: 20%;
+			margin-bottom: 0;
+		}
 	}
 
 	&-slide-text {
 		text-align: center;
 		font-size: 14px;
-		margin-bottom: 20px;
+		margin-bottom: 5px;
+
+		@media all and (min-width: $md) {
+			margin-bottom: 20px;
+			font-size: 12px;
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 14px;
+		}
+	}
+
+	.button {
+		margin-top: 10px;
+		padding: 5px 10px;
+
+		@media all and (min-width: $lg) {
+			padding: 10px 30px;
+		}
 	}
 
 	.swiper-pagination-bullet.swiper-pagination-bullet-active {
