@@ -8,35 +8,71 @@
 
 	&-wrapper {
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column;
 		margin-bottom: 40px;
+
+		@media all and (min-width: $md) {
+			font-size: 20px;
+			justify-content: space-between;
+			flex-direction: row;
+			margin-bottom: 0;
+		}
 	}
 
 	&-nav-inner {
-		width: 50%;
+		width: 100%;
+		margin-bottom: 40px;
+
+		@media all and (min-width: $md) {
+			width: 50%;
+		}
 	}
 
 	&-nav {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+		}
 	}
 
 	&-nav-wrapp {
 		display: flex;
 		flex-direction: column;
-		margin-right: 75px;
+
+		@media all and (min-width: $md) {
+			margin-right: 50px;
+		}
 	}
 
 	&-nav-link {
 		color: $main;
 		transition: ease opacity $tr;
+		font-size: 15px;
+		text-align: center;
+		margin-bottom: 20px;
+
+		@media all and (min-width: $m) {
+			font-size: 18px
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 20px
+		}
 	}
 
 	&-address-wrapper {
-		width: 50%;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		color: $main;
+		text-align: center;
+
+		@media all and (min-width: $md) {
+			width: 50%;
+		}
 	}
 
 	&-work {
@@ -82,10 +118,12 @@
 
 	&-privacy-text {
 		font-size: 12px;
+		text-align: center;
 	}
 
 	&-data {
 		margin-top: 15px;
 		text-align: center;
+		font-size: 14px;
 	}
 }
