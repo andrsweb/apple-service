@@ -5,15 +5,14 @@
         max-width: 1200px;
     }
 
-    &-wrapper {
-        border: 1px solid $jet;
-        padding: 20px 0;
-        border-radius: 5px;
-    }
-
     &-item {
         display: flex;
+        flex-direction: column;
         margin-bottom: 50px;
+
+        @media all and (min-width: $md) {
+            flex-direction: row;
+        }
 
         &:last-child {
             margin-bottom: 0;
@@ -23,24 +22,42 @@
     &-table {
         display: flex;
         flex-direction: column;
-        width: 70%;
+        width: 100%;
+        order: 2;
+
+        @media all and (min-width: $md) {
+            width: 70%;
+            order: 1;
+        }
     }
 
     &-img {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 30%;
+        width: 100%;
+        order: 1;
+
+        @media all and (min-width: $md) {
+            width: 30%;
+            order: 2;
+        }
     }
 
     &-row-title {
         display: flex;
         margin-bottom: 20px;
+        font-size: 15px;
+
+        @media all and (min-width: $lg) {
+            font-size: 18px;
+        }
     }
 
     &-col-name {
         display: flex;
         justify-content: center;
+
         &:first-child {
             width: 30%;
         }
@@ -56,13 +73,18 @@
 
     &-row {
         display: flex;
-        margin-bottom: 5px;
+        margin-bottom: 20px;
     }
 
     &-col {
         display: flex;
         justify-content: center;
-        font-size: 15px;
+        font-size: 12px;
+
+        @media all and (min-width: $lg) {
+            font-size: 15px;
+        }
+
         &:first-child {
             width: 30%;
         }
