@@ -29,13 +29,15 @@
 
     &-item-broken {
         position: relative;
+        margin-right: 100px;
+
 
         &::before {
             content: "";
             display: block;
             position: absolute;
             top: 50%;
-            right: 0;
+            right: -50px;
             transform: translateY(-50%);
             transform: rotate(-45deg);
             border-bottom: 3px solid $jet;
