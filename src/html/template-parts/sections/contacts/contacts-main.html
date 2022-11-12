@@ -18,7 +18,7 @@
                 </a>
             </div>
         </div>
-        <div class="contacts-work">
+        <section class="contacts-work">
             <div class="contacts-work-name-wrapper">
                 <img src="img/contacts/watch.png" width="40" height="40" alt="">
                 <p class="contacts-work-name">
@@ -26,6 +26,9 @@
                 </p>
             </div>
             @@include( 'contacts-table.html')
-        </div>
+        </section>
+        @@include( '../garranty/garranty-info.html', { title: 'Ремонт на дому или в офисе', text1: 'Ремонт на дому или в офисе в Москве — отличное решение, когда:',
+                    text2: '', text3: 'Не нужно разбирать технику', text4: 'Поломка относитка к классу типовых',
+                    text5: 'Нет возможности посетить сервисный центр'})
     </div>
 </section>
