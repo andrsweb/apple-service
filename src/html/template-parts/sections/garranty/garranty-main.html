@@ -21,18 +21,9 @@
             ] )
         </div>
         @@include( '../../sections/feedback.html')
-        <div class="garranty-info">
-            <div class="garranty-info-text-wrapper">
-                <p class="garranty-info-text">
-                    В случае гарантийного ремонта работы выполняются бесплатно!!!
-                </p>
-                <p class="garranty-info-text">
-                    Подробные условия вы можете узнать у наших специалистов.
-                </p>
-            </div>
-            <div class="garranty-info-img">
-                <img src="img/garranty/operator.png" width="500" height="600" alt="">
-            </div>
-        </div>
+        @@loop( 'garranty-info.html', [
+            { "text1": "В случае гарантийного ремонта работы выполняются бесплатно!!!", "text2": " Подробные условия вы можете узнать у наших специалистов.",
+                "title": "", "text3": "", "text4": "", "text5": ""}
+        ] )
     </div>
 </section>

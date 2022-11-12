@@ -1,0 +1,219 @@
+.contacts {
+    padding: 100px 0 10px;
+
+    @media all and (min-width: $md) {
+        padding: 190px 0 40px;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+
+        @media all and (min-width: $md) {
+            flex-direction: row;
+        }
+
+        &-img-wrapp {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+
+            @media all and (min-width: $md) {
+                width: 50%;
+                margin-bottom: 0;
+            }
+        }
+
+        &-text-wrapp {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            @media all and (min-width: $md) {
+                width: 50%;
+            }
+        }
+
+        &-text {
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 20px;
+
+            @media all and (min-width: $md) {
+                font-size: 18px;
+            }
+
+            span {
+                font-size: 24px;
+                text-transform: uppercase;
+                color: $span;
+            }
+        }
+
+        &-link {
+            text-align: center;
+            color: $jet;
+            transition: opacity ease $tr;
+        }
+    }
+
+    &-work {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0 0;
+        background: rgba(0, 0, 0, 0.055);
+        border-radius: 10px;
+
+        @media all and (min-width: $lg) {
+            flex-direction: row;
+            margin: 70px 0;
+            padding: 20px;
+        }
+
+        @media all and (min-width: $xl) {
+            padding: 30px;
+        }
+
+        &-name-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            @media all and (min-width: $lg) {
+                flex-direction: row;
+                width: 20%;
+            }
+        }
+
+        &-name {
+            font-size: 18px;
+            margin-left: 0px;
+            margin-bottom: 30px;
+
+            @media all and (min-width: $lg) {
+                margin-left: 10px;
+                margin-bottom: 0;
+            }
+        }
+
+        &-table {
+            width: 100%;
+
+            @media all and (min-width: $lg) {
+                width: 80%;
+            }
+        }
+
+        &-row-name {
+            display: flex;
+            margin-bottom: 10px;
+
+            @media all and (min-width: $lg) {
+                margin-bottom: 30px;
+            }
+        }
+
+        &-col-name {
+            display: flex;
+            justify-content: center;
+            font-size: 11px;
+            border-radius: 10px;
+            @media all and (min-width: $m) {
+                font-size: 13px;
+            }
+
+            @media all and (min-width: $md) {
+                font-size: 15px;
+            }
+
+            @media all and (min-width: $lg) {
+                font-size: 18px;
+                background: $silv;
+                color: $white;
+                margin-right: 5px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            &:first-child {
+                width: 40%;
+            }
+
+            &:nth-child(2) {
+                width: 45%;
+            }
+
+            &:last-child {
+                width: 25%;
+            }
+        }
+
+        &-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        &-col {
+            display: flex;
+            justify-content: center;
+            font-size: 10px;
+
+            @media all and (min-width: $m) {
+                font-size: 12px;
+            }
+
+            @media all and (min-width: $md) {
+                font-size: 15px;
+            }
+
+            &:first-child {
+                width: 40%;
+            }
+
+            &:nth-child(2) {
+                width: 40%;
+            }
+
+            &:last-child {
+                width: 30%;
+            }
+        }
+    }
+    .garranty-info-text-wrapper {
+
+        .contacts-list {
+            position: relative;
+            padding-left: 20px;
+            font-size: 14px;
+
+            @media all and (min-width: $m) {
+                font-size: 16px;
+            }
+
+            @media all and (min-width: $lg) {
+                font-size: 20px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: rotateY( -50% );
+                width: 5px;
+                height: 5px;
+                background: $jet;
+                border-radius: 50%;
+            }
+        }
+    }
+}
