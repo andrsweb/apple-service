@@ -59,21 +59,31 @@ const submitForm = ( selector, response, php ) => {
 			e.preventDefault()
 
 			const formResponse	= document.querySelector( response ),
-				request		= new XMLHttpRequest(),
-				formData		= new FormData( form )
+				  request		= new XMLHttpRequest(),
+				  formData		= new FormData( form )
 
-			request.open( 'post', php , true )
+			request.open( 'post', php, true )
+			request.responseType = 'json'
 
 			formResponse.classList.remove( ['success', 'error'] )
 			formResponse.textContent = 'Обработка...'
 
 			request.addEventListener( 'load', () => {
-				if  ( request.status === 200 ) {
-					form.classList.add( 'success' )
-					form.innerHTML = request.response
-				} else {
+				if( request.status === 200 ){
+					// If success.
+					if( request.response.success ){
+						form.classList.add( 'success' )
+						form.classList.remove( 'error' )
+						form.innerHTML = request.response.message
+					}	else {	// If error.
+						formResponse.classList.remove( 'success' )
+						formResponse.classList.add( 'error' )
+						formResponse.textContent = request.response.message
+					}
+				}	else {
+					formResponse.classList.remove( 'success' )
 					formResponse.classList.add( 'error' )
-					console.error( request.response )
+					formResponse.textContent = request.response
 				}
 			} )
 

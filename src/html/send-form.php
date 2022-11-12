@@ -50,36 +50,51 @@ function as_check_phone( string $phone ): bool
 	return preg_match('/^[0-9()+\-\s]+$/iu', $phone );
 }
 
-$person_name		= isset( $_POST['person-name'] ) ? as_clean_value( $_POST['person-name'] ) : null;
-$person_phone		= isset( $_POST['person-phone'] ) ? as_clean_value( $_POST['person-phone'] ) : null;
-$person_text		= isset( $_POST['textarea'] ) ? as_clean_value( $_POST['textarea'] ) : null;
+$person_name	= isset( $_POST['person-name'] ) ? as_clean_value( $_POST['person-name'] ) : null;
+$person_phone	= isset( $_POST['person-phone'] ) ? as_clean_value( $_POST['person-phone'] ) : null;
+$person_text	= isset( $_POST['textarea'] ) ? as_clean_value( $_POST['textarea'] ) : null;
 
 // All fields are required.
 if( ! $person_name || ! $person_phone || ! $person_text ){
-	echo 'Пожалуйста, заполните все поля.';
+	echo json_encode( [
+		'success'	=> 0,
+		'message'	=> 'Пожалуйста, заполните все поля.'
+	] );
 	die();
 }
 
 // Only letters & spaces in name.
 if( ! as_check_name( $person_name ) ){
-	echo 'Пожалуйста, введите корректное имя.';
+	echo json_encode( [
+		'success'	=> 0,
+		'message'	=> 'Пожалуйста, введите корректное имя.'
+	] );
 	die();
 }
 
 // Check length to avoid very large text.
 if( ! as_check_length( $person_name, 1, 50 ) ){
-	echo 'Имя не должно превышать 50 символов.';
+	echo json_encode( [
+		'success'	=> 0,
+		'message'	=> 'Имя не должно превышать 50 символов.'
+	] );
 	die();
 }
 
 if( ! as_check_length( $person_phone, 3, 30 ) ){
-	echo 'Телефон не должен превышать 30 символов или быть меньше 3 символов.';
+	echo json_encode( [
+		'success'	=> 0,
+		'message'	=> 'Телефон не должен превышать 30 символов или быть меньше 3 символов.'
+	] );
 	die();
 }
 
 // Check phone symbols.
 if( ! as_check_phone( $person_phone ) ){
-	echo 'Пожалуйста, введите корректный телефон.';
+	echo json_encode( [
+		'success'	=> 0,
+		'message'	=> 'Пожалуйста, введите корректный телефон.'
+	] );
 	die();
 }
 
@@ -97,9 +112,15 @@ $headers = "From: no-reply@" . $_SERVER['HTTP_HOST'] . "\r\n" .
 $result = mail('some@mail.com', 'Форма обратной связи', $message, $headers );
 
 if( $result )
-	echo 'Спасибо за Ваше сообщение! Мы свяжемся с Вами в ближайшее время.';	// Success.
+	echo json_encode( [
+		'success'	=> 1,
+		'message'	=> 'Спасибо за Ваше сообщение! Мы свяжемся с Вами в ближайшее время.'
+	] );	// Success.
 else
-	echo 'Ошибка отправки. Пожалуйста, попробуйте позже.';	// Failed.
+	echo json_encode( [
+		'success'	=> 0,
+		'message'	=> 'Ошибка отправки. Пожалуйста, попробуйте позже.'
+	] );	// Failed.
 
 die();
 
