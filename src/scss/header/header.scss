@@ -145,6 +145,7 @@
 		}
 
 		&.opened {
+			overflow-y: auto;
 			padding: 20px 0;
 			transition: opacity ease $tr;
 			opacity: 1;
