@@ -1,0 +1,121 @@
+.garranty {
+    padding: 100px 0 10px;
+
+    @media all and (min-width: $md) {
+        padding: 190px 0 40px;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &-text {
+        font-size: 15px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &-items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+
+        @media all and (min-width: $md) {
+            margin: 50px -20px 20px -20px;
+        }
+    }
+
+    &-item {
+        width: calc( 100% / 2 );
+        margin-bottom: 20px;
+
+        @media all and (min-width: $md) {
+            width: calc( 100% / 4 );
+            margin-bottom: 0;
+        }
+
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-text {
+            font-size: 12px;
+            text-align: center;
+
+            @media all and (min-width: $m) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &-title {
+        font-size: 16px;
+        font-weight: $fw-bold;
+
+        @media all and (min-width: $md) {
+            font-size: 24px;
+        }
+    }
+
+    &-img {
+        margin-bottom: 20px;
+    }
+
+    &-info {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media all and (min-width: $md) {
+            flex-direction: row;
+        }
+
+        &-text-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 30px;
+
+            @media all and (min-width: $md) {
+                width: 50%;
+            }
+        }
+
+        &-img {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            @media all and (min-width: $sm) {
+                width: 70%;
+                justify-content: flex-end;
+            }
+
+            @media all and (min-width: $md) {
+                width: 50%;
+            }
+        }
+
+        &-text {
+            width: 100%;
+            font-size: 14px;
+            font-weight: $fw-bold;
+            margin-bottom: 30px;
+            text-align: center;
+
+            @media all and (min-width: $md) {
+                font-size: 16px;
+                text-align: left;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
