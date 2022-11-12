@@ -58,9 +58,9 @@ const submitForm = ( selector, response, php ) => {
 		form.addEventListener( 'submit', e => {
 			e.preventDefault()
 
-			const formResponse	= document.querySelector( response ),
-				  request		= new XMLHttpRequest(),
-				  formData		= new FormData( form )
+			const formResponse	= form.querySelector( response ),
+					request		= new XMLHttpRequest(),
+					formData		= new FormData( form )
 
 			request.open( 'post', php, true )
 			request.responseType = 'json'

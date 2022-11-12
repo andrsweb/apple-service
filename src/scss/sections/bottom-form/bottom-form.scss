@@ -17,6 +17,11 @@
         }
     }
 
+    .bottom-form-box {
+        display: flex;
+        align-items: center;
+    }
+
     .bottom-form-text {
         margin: 0 auto 10px auto;
         width: 100%;
@@ -88,4 +93,9 @@
         padding: 0 10px;
     }
 
+    .form-response {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 12px;
+    }
 }
