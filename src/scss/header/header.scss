@@ -271,7 +271,7 @@
 
 			&:nth-child(3) .header-submenu {
 				li {
-					width: 33.333%;
+					width: 16.66%;
 				}
 			}
 
@@ -306,10 +306,10 @@
 					justify-content: center;
 					margin-bottom: 10px;
 					margin-right: 0;
-					font-size: 12px;
+					font-size: 10px;
 
 					@media all and (min-width: $lg) {
-						font-size: 15px;
+						font-size: 12px;
 					}
 
 					&:last-child {
