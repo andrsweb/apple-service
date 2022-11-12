@@ -5,6 +5,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     'use strict'
 
     toggleBurgerMenu()
+    showHiddenMenu( '.has-children' )
 } )
 
 const burgerButton = document.querySelector( '.burger-button' )
@@ -55,3 +56,32 @@ window.addEventListener('scroll', () => {
         header.classList.remove( 'scrolled' )
     }
 })
+
+const showHiddenMenu = ( selector ) => {
+    const burgerLinks = document.querySelectorAll( selector )
+
+    burgerLinks.forEach( link => {
+        link.addEventListener( 'click', e => {
+            e.preventDefault()
+            const windowWidth = window.innerWidth
+            const WINDOW_WIDTH_MD = 767
+
+            if( windowWidth <= WINDOW_WIDTH_MD ) {
+                if( ! link.classList.contains( 'opened' ) )
+                    link.classList.add( 'opened')
+                else link.classList.remove( 'opened' )
+            }
+        } )
+    } )
+
+    window.addEventListener( 'resize', () => {
+        const windowWidth = window.innerWidth
+        const WINDOW_WIDTH_MD = 767
+
+        if( windowWidth >= WINDOW_WIDTH_MD ) {
+            burgerLinks.forEach( link => {
+                link.classList.remove( 'opened' )
+            } )
+        }
+    } )
+}

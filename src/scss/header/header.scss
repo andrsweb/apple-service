@@ -180,13 +180,24 @@
 
 			.header-menu-link {
 				font-size: 20px;
-				position: static;
+				position: relative;
 				line-height: $lh;
-				width: 100%;
 				margin-bottom: 10px;
+				display: inline-block;
+				padding: 0 5px;
 
 				&::before {
-					display: none;
+					content: "";
+					position: absolute;
+					top: -40%;
+					right: 50%;
+					width: 5px;
+					height: 5px;
+					border-right: 3px solid $jet;
+					border-bottom: 3px solid $jet;
+					transform: rotate( 45deg )
+								translateX( 50% );
+					transition: all ease $tr;
 				}
 			}
 
@@ -323,6 +334,37 @@
 						opacity: 1;
 						visibility: visible;
 						z-index: 0;
+					}
+				}
+
+				&.opened {
+					flex-direction: column;
+					box-shadow: 0;
+					z-index: 100;
+
+					.header-submenu {
+						display: flex;
+						flex-wrap: wrap;
+						position: relative;
+						width: 100%;
+
+						li {
+							font-size: 8px;
+							width: 50%;
+
+							@media all and (min-width: $m) {
+								font-size: 12px;
+							}
+						}
+					}
+
+					.header-menu-link {
+						&::before {
+							border-right: 0;
+							top: 50%;
+							right: 30%;
+							transform: rotate(-180deg);
+						}
 					}
 				}
 			}
