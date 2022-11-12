@@ -2,12 +2,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 40px;
 
 	&-wrapper {
 		display: flex;
 		justify-content: center;
 		width: 100%;
+		margin-top: 40px;
 	}
 
 	@media all and (min-width: $m) {
