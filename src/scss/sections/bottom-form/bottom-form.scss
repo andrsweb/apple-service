@@ -33,6 +33,10 @@
             @media all and (min-width: $lg) {
                 font-size: 25px;
             }
+
+            a {
+                transition: opacity ease $tr;
+            }
         }
     }
 

@@ -1,5 +1,9 @@
 .contacts {
-    padding: 190px 0 40px;
+    padding: 100px 0 10px;
+
+    @media all and (min-width: $md) {
+        padding: 190px 0 40px;
+    }
 
     .container {
         max-width: 1200px;
@@ -7,22 +11,43 @@
 
     &-info {
         display: flex;
-        &-img {}
+        flex-direction: column;
+
+        @media all and (min-width: $md) {
+            flex-direction: row;
+        }
 
         &-img-wrapp {
-            width: 50%;
+            width: 100%;
             display: flex;
             justify-content: center;
+            margin-bottom: 30px;
+
+            @media all and (min-width: $md) {
+                width: 50%;
+                margin-bottom: 0;
+            }
         }
 
         &-text-wrapp {
-            width: 50%;
+            width: 100%;
             display: flex;
             flex-direction: column;
+
+            @media all and (min-width: $md) {
+                width: 50%;
+            }
         }
 
         &-text {
+            text-align: center;
+            font-size: 15px;
             margin-bottom: 20px;
+
+            @media all and (min-width: $md) {
+                font-size: 18px;
+            }
+
             span {
                 font-size: 24px;
                 text-transform: uppercase;
@@ -31,7 +56,9 @@
         }
 
         &-link {
+            text-align: center;
             color: $jet;
+            transition: opacity ease $tr;
         }
     }
 }
