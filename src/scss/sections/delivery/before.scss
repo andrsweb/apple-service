@@ -24,13 +24,17 @@
 
         @media all and (min-width: $m) {
             width: calc( 100% / 2 );
+            margin-bottom: 40px;
+        }
+
+        @media all and (min-width: $lg) {
+            margin-bottom: 70px;
         }
     }
 
     &-item-broken {
         position: relative;
         margin-right: 100px;
-
 
         &::before {
             content: "";
