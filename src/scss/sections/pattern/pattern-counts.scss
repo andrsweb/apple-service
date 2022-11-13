@@ -1,0 +1,63 @@
+.pattern-counts {
+    padding: 20px 0;
+
+    @media all and (min-width: $md) {
+		padding: 50px 0;
+	}
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &-items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+    }
+
+    &-item {
+        display: flex;
+        width: calc( 100% / 1 );
+        margin-bottom: 40px;
+
+        @media all and (min-width: $md) {
+            width: calc( 100% / 2 );
+        }
+
+        @media all and (min-width: $lg) {
+            width: calc( 100% / 4 );
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &-img {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+
+            @media all and (min-width: $lg) {
+                margin-right: 15px;
+            }
+        }
+
+        &-title {
+            font-weight: $fw-bold;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        &-text {
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+
+    &-box {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
