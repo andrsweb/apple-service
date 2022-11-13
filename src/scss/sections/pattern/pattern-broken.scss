@@ -1,0 +1,95 @@
+.pattern-broken {
+    padding: 20px 0;
+
+    @media all and (min-width: $md) {
+		padding: 50px 0;
+	}
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+
+        @media all and (min-width: $md) {
+            flex-direction: row;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.reverse {
+            display: flex;
+            flex-direction: column;
+
+            @media all and (min-width: $md) {
+                flex-direction: row;
+            }
+
+            .pattern-broken-button {
+                display: flex;
+                justify-content: center;
+
+                @media all and (min-width: $md) {
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+
+    &-img {
+        width: 100%;
+        margin-bottom: 30px;
+
+        @media all and (min-width: $md) {
+            width: 50%;
+        }
+    }
+
+    &-wrapper {
+        width: 100%;
+
+        @media all and (min-width: $md) {
+            width: 50%;
+        }
+    }
+
+    &-text {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 14px;
+
+        @media all and (min-width: $md) {
+            font-size: 16px;
+        }
+
+        @media all and (min-width: $xl) {
+            font-size: 18px;
+        }
+    }
+
+    &-button {
+        display: flex;
+        justify-content: center;
+
+        @media all and (min-width: $md) {
+            justify-content: flex-end;
+        }
+    }
+
+    &-price {
+        display: inline-block;
+        background: $silv;
+        padding: 10px;
+        color: $white;
+    }
+}

@@ -1,0 +1,17 @@
+.pattern-main {
+    padding: 100px 0 20px;
+
+    @media all and (min-width: $md) {
+		padding: 190px 0 40px;
+	}
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &-text {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}

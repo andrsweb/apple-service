@@ -49,6 +49,15 @@
 @import 'sections/contacts/contacts';
 @import 'sections/contacts/maps';
 
+//pattern styles
+@import 'sections/pattern/pattern-main';
+@import 'sections/pattern/pattern-counts';
+@import 'sections/pattern/pattern-broken';
+@import 'sections/pattern/pattern-advantages';
+@import 'sections/pattern/pattern-price';
+@import 'sections/pattern/pattern-work';
+@import 'sections/pattern/pattern-testimonials';
+
 //buttons
 @import 'common/buttons.scss';
 

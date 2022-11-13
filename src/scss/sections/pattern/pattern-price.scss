@@ -1,0 +1,81 @@
+.pattern-price {
+    padding: 0;
+
+    @media all and (min-width: $md) {
+        padding: 50px 0;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &-row-name {
+        display: flex;
+        margin-bottom: 30px;
+        font-size: 12px;
+        font-weight: $fw-bold;
+
+        @media all and (min-width: $sm) {
+            font-size: 18px;
+        }
+
+        @media all and (min-width: $md) {
+            font-size: 24px;
+        }
+    }
+
+    &-col-name {
+        display: flex;
+
+        &:first-child {
+            width: 40%;
+        }
+
+        &:nth-child(2) {
+            width: 30%;
+        }
+
+        &:last-child {
+            width: 30%;
+        }
+    }
+
+    &-row {
+        display: flex;
+        margin-bottom: 15px;
+        padding: 0 10px;
+
+        @media all and (min-width: $m) {
+            &:nth-child(2n + 1) {
+                background: $silv;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    &-col {
+        display: flex;
+        font-size: 10px;
+
+        @media all and (min-width: $sm) {
+            font-size: 14px;
+        }
+
+        @media all and (min-width: $md) {
+            font-size: 20px;
+        }
+
+        &:first-child {
+            width: 40%;
+        }
+
+        &:nth-child(2) {
+            width: 30%;
+        }
+
+        &:last-child {
+            width: 30%;
+        }
+    }
+
+}

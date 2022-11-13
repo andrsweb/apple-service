@@ -5,7 +5,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     'use strict'
 
     toggleBurgerMenu()
-    showHiddenMenu( '.has-children' )
+    showHiddenMenu( '.has-children > .header-menu-link' )
 } )
 
 const burgerButton = document.querySelector( '.burger-button' )
@@ -63,13 +63,15 @@ const showHiddenMenu = ( selector ) => {
     burgerLinks.forEach( link => {
         link.addEventListener( 'click', e => {
             e.preventDefault()
+
             const windowWidth = window.innerWidth
             const WINDOW_WIDTH_MD = 767
 
             if( windowWidth <= WINDOW_WIDTH_MD ) {
-                if( ! link.classList.contains( 'opened' ) )
-                    link.classList.add( 'opened')
-                else link.classList.remove( 'opened' )
+
+                if( ! link.parentElement.classList.contains( 'opened' ) )
+                    link.parentElement.classList.add( 'opened')
+                else link.parentElement.classList.remove( 'opened' )
             }
         } )
     } )
