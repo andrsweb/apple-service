@@ -40,6 +40,10 @@
             @media all and (min-width: $lg) {
                 margin-right: 15px;
             }
+
+            img {
+                max-height: 75px;
+            }
         }
 
         &-title {
