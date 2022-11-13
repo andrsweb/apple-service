@@ -362,7 +362,7 @@
 						&::before {
 							border-right: 0;
 							top: 50%;
-							right: 30%;
+							right: 20%;
 							transform: rotate(-180deg);
 						}
 					}
@@ -451,15 +451,15 @@
 
 		@media all and (min-width: $md) {
 			display: flex;
+			padding: 5px;
+			background: $silv;
+			color: $white;
+			border-radius: 8px;
 			font-size: 12px;
 		}
 
 		@media all and (min-width: 900px) {
-			font-size: 15px;
-		}
-
-		@media all and (min-width: $lg) {
-			font-size: 15px;
+			font-size: 14px;
 		}
 
 		@media all and (min-width: $xl) {

@@ -1,6 +1,10 @@
 .footer {
-	padding: 50px 0;
+	padding: 10px 0;
 	background: $silv;
+
+	@media all and (min-width: $md) {
+		padding: 50px 0;
+	}
 
 	.container {
 		max-width: 1200px;
@@ -9,7 +13,8 @@
 	&-wrapper {
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 40px;
+		margin: 50px 0 40px 0;
+		position: relative;
 
 		@media all and (min-width: $md) {
 			font-size: 20px;
@@ -64,42 +69,72 @@
 	}
 
 	&-address-wrapper {
-		width: 100%;
 		display: flex;
 		flex-direction: column;
 		color: $main;
 		text-align: center;
-
-		@media all and (min-width: $md) {
-			width: 50%;
-		}
 	}
 
 	&-work {
 		font-weight: $fw-bold;
+		margin-bottom: 10px;
+
+		@media all and (min-width: $md) {
+            font-size: 15px;
+        }
 	}
 
 	&-address {
 		display: flex;
 		flex-direction: column;
+		margin-bottom: 20px;
+
+		@media all and (min-width: $md) {
+            font-size: 12px;
+        }
 	}
 
 	&-address-title {
 		font-size: 20px;
+
+		@media all and (min-width: $md) {
+            font-size: 14px;
+        }
+
+		@media all and (min-width: $lg) {
+            font-size: 18px;
+        }
 	}
 
 	&-address-text {
 		font-size: 15px;
+
+		@media all and (min-width: $md) {
+            font-size: 12px;
+        }
+
+		@media all and (min-width: $lg) {
+            font-size: 15px;
+        }
 	}
 
 	&-address-link {
 		color: $main;
+		margin: 10px 0 0;
+
+		@media all and (min-width: $md) {
+            font-size: 18px;
+        }
+
+		@media all and (min-width: $lg) {
+            font-size: 20px;
+        }
 	}
 
 	&-pay {
 		display: flex;
 		justify-content: center;
-		margin-bottom: 40px;
+		margin: 40px 0;
 	}
 
 	&-pay-items {
@@ -113,8 +148,6 @@
 		padding: 0 20px;
 		width: calc( 100% / 4 );
 	}
-
-	&-privacy {}
 
 	&-privacy-text {
 		font-size: 12px;
