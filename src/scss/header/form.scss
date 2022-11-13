@@ -26,8 +26,8 @@
 		justify-content: center;
 		padding: 20px 0;
 		margin: auto 0;
-		border-radius: 4px;
-		background: rgb(212, 211, 211);
+		border-radius: 14px;
+		background: rgb(255, 249, 249);
 		box-shadow: 4px 3px 20px -1px rgba(126, 125, 125, 0.897);
 
         &.success {
@@ -65,10 +65,6 @@
 		flex-direction: column;
 		border: 0;
         width: 100%;
-
-        @media all and (min-width: $sm) {
-			flex-direction: row;
-		}
 	}
 
 	input {
@@ -78,18 +74,19 @@
 		height: 38px;
 		width: 100%;
 		margin-bottom: 15px;
-		border-radius: 4px;
-		border: 1px solid #ced4da;
+		border-radius: 14px;
 		padding-left: 10px;
 		transition: box-shadow ease $tr;
-		color: #495057;
+		color: $jet;
+		border: 0;
+		background: rgb(245, 241, 241);
 
 		&::placeholder {
 			opacity: 1;
 		}
 
-		&:last-child {
-			margin-bottom: 0;
+		&:focus {
+			box-shadow: 0px 0px 5px 1px $accent;
 		}
 	}
 
@@ -99,20 +96,16 @@
 		font-size: 14px;
 		min-height: 90px;
 		resize: none;
-		border: 1px solid #ced4da;
-		padding-left: 10px;
+		border: 0;
+		padding: 10px 0 0 10px;
 		transition: box-shadow ease $tr;
-		color: #495057;
-        margin-top: 20px;
-        border-radius: 4px;
+		color: $jet;
+        border-radius: 14px;
+		background: rgb(245, 241, 241);
 
-        @media all and (min-width: $sm) {
-			margin: 0 0 0 20px;
+		&:focus {
+			box-shadow: 0px 0px 5px 1px $accent;
 		}
-
-			&:focus {
-				box-shadow: 0px 0px 5px 1px $accent;
-			}
 
 		&::placeholder {
 			opacity: 1;
@@ -133,6 +126,9 @@
 				opacity: $op;
 			}
 		}
+	}
+	.button {
+		border-radius: 14px;
 	}
 }
 
