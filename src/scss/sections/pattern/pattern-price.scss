@@ -45,9 +45,11 @@
         margin-bottom: 15px;
         padding: 0 10px;
 
-        &:nth-child(2n + 1) {
-            background: $silv;
-            border-radius: 10px;
+        @media all and (min-width: $m) {
+            &:nth-child(2n + 1) {
+                background: $silv;
+                border-radius: 10px;
+            }
         }
     }
 
