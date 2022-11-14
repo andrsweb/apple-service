@@ -57,7 +57,7 @@
     }
 
     &-anim {
-        animation-name: spinner;
+        animation: spinner;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         animation-duration: 6s;

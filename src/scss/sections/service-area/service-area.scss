@@ -1,5 +1,5 @@
 .service {
-    padding: 100px 0 40px;
+    padding: 100px 0 0;
 
     @media all and (min-width: $md) {
 		padding: 220px 0 40px;
@@ -12,6 +12,7 @@
     &-text {
         font-size: 16px;
         margin-bottom: 20px;
+        text-align: center;
     }
 
     .dropdowns-content {
@@ -25,10 +26,18 @@
     }
 
     .dropdown {
-        width: calc( 100% / 3 );
+        width: calc( 100% / 1 );
         padding: 0 20px;
         display: flex;
         flex-direction: column;
+
+        @media all and (min-width: $m) {
+            width: calc( 100% / 2);
+        }
+
+        @media all and (min-width: $lg) {
+            width: calc( 100% / 3 );
+        }
     }
 
     .dropdown-title {
@@ -41,6 +50,15 @@
         border-radius: 10px;
         cursor: pointer;
         transition: scale ease 0.5s;
+        font-size: 15px;
+
+        @media all and (min-width: $m) {
+            font-size: 13px;
+        }
+
+        @media all and (min-width: $lg) {
+            font-size: 15px;
+        }
 
         &:hover {
             scale: 1.05;
@@ -67,6 +85,7 @@
     .dropdown-link {
         width: 100%;
         margin-bottom: 5px;
+        font-size: 15px;//
 
         &:last-child {
             margin-bottom: 0;
