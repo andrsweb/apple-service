@@ -11,25 +11,14 @@
 
     &-items {
         display: flex;
-        flex-wrap: wrap;
-        margin: 0 -10px;
     }
 
     &-item {
-        padding: 0 10px;
-        width: calc( 100% / 1 );
         margin-bottom: 30px;
-
-        @media all and (min-width: $sm) {
-            width: calc( 100% / 2 );
-        }
-
-        @media all and (min-width: $md) {
-            width: calc( 100% / 4);
-        }
     }
 
     &-inner {
+        max-width: 800px;
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -49,8 +38,8 @@
         text-align: center;
         color: $jet;
 
-        @media all and (min-width: $sm) {
-            font-size: 12px;
+        @media all and (min-width: $m) {
+            font-size: 16px;
         }
     }
 
@@ -60,8 +49,8 @@
         color: $jet;
         margin-bottom: 20px;
 
-        @media all and (min-width: $sm) {
-            font-size: 10px;
+        @media all and (min-width: $m) {
+            font-size: 14px;
         }
     }
 
@@ -70,29 +59,86 @@
         font-size: 14px;
         min-height: 200px;
         color: $jet;
+        padding: 0 10px;
 
         @media all and (min-width: $sm) {
-            font-size: 12px;
-            min-height: 255px;
+            font-size: 16px;
         }
 
         @media all and (min-width: $m) {
-            min-height: 150px;
-            font-size: 10px;
+            font-size: 18px;
         }
+    }
 
-        @media all and (min-width: $md) {
-            min-height: 210px;
-            font-size: 10px;
-        }
+    .swiper-button-forw {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 2;
 
         @media all and (min-width: $lg) {
-            min-height: 150px;
+            left: 5%;
         }
 
-        @media all and (min-width: $xl) {
-            min-height: 165px;
-            font-size: 12px;
+        &::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            border-bottom: 10px solid $jet;
+            border-right: 10px solid $jet;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 0;
+            transform: rotate( 135deg );
+
+            @media all and (min-width: $lg) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .swiper-button-back {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: 2;
+
+        @media all and (min-width: $lg) {
+            right: 5%;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            border-bottom: 10px solid $jet;
+            border-right: 10px solid $jet;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            right: 0;
+            transform: rotate( -45deg );
+
+            @media all and (min-width: $lg) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    &-wrapp {
+        position: relative;
+    }
+
+    .swiper {
+        max-width: 800px;
+
+        &-wrapper {
+            max-width: 800px;
         }
     }
 }
+

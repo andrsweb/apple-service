@@ -1,4 +1,4 @@
-import Swiper, { Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
@@ -15,11 +15,16 @@ const testiSwiper = () => {
         spaceBetween: 50,
         grabCursor: 1,
 
-        modules: [ Pagination ],
+        modules: [ Pagination, Navigation ],
 
         pagination: {
             el: '.swiper-pagination',
             clickable: true
-        }
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-forw',
+            prevEl: '.swiper-button-back',
+        },
 	} )
 }
