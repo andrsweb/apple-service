@@ -30,10 +30,17 @@
 
     a {
         margin-right: 10px;
+        width: 35px;
+        height: 35px;
 
         &:last-child {
             margin-right: 0;
         }
+    }
+
+    picture {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -64,7 +71,8 @@
     }
 
     img {
-        max-width: 60%;
+        display: block;
+        max-width: 80%;
 
         @media all and (min-width: $lg) {
 			max-width: 100%;
@@ -98,6 +106,10 @@
         &:last-child {
             margin-right: 0;
         }
+
+        img {
+            display: block;
+        }
     }
 }
 
@@ -106,6 +118,7 @@
     align-items: center;
 
     img {
+        display: block;
         margin-right: 10px;
     }
 }

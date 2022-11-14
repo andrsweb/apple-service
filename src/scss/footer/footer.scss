@@ -147,6 +147,10 @@
 		display: flex;
 		padding: 0 20px;
 		width: calc( 100% / 4 );
+
+		img {
+			display: block;
+		}
 	}
 
 	&-privacy-text {
