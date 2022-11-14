@@ -104,3 +104,27 @@
         }
     }
 }
+
+.service-towns-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    margin-top: 50px;
+}
+
+.service-town {
+    padding: 0 5px;
+    width:  calc( 100% / 7 ); //7
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+
+    img {
+        margin-right: 5px;
+    }
+}
+
+.service-town-link {
+    font-size: 13px; //13
+    cursor: pointer;
+}
