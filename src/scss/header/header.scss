@@ -22,10 +22,6 @@
 		max-width: 1200px;
 	}
 
-	&-wrapper {
-		// padding: 5px 0;
-	}
-
 	&-submenu-links {
 		padding: 10px;
 		background: $main;
@@ -63,6 +59,12 @@
 		&:last-child {
 			margin-right: 0;
 		}
+
+		&.mob {
+			@media all and (min-width: $md) {
+				display: none;
+			}
+		}
 	}
 
 	&-logo {
@@ -74,11 +76,7 @@
 		transition: opacity ease $tr;
 
 		@media all and (min-width: $md) {
-			margin-right: 20px;
-		}
-
-		@media all and (min-width: $lg) {
-			margin-right: 10%;
+			margin-right: 10px;
 		}
 
 		@media all and (min-width: $xl) {
@@ -138,7 +136,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: flex-end;
 		position: relative;
 		opacity: 0;
 
@@ -436,16 +434,19 @@
 	&-contacts-phone {
 		font-size: 12px;
 
-		@media all and (min-width: 900px) {
+		@media all and (min-width: $md) {
 			font-size: 15px;
+			width: 138px;
 		}
 
 		@media all and (min-width: $lg) {
-			font-size: 15px;
+			font-size: 20px;
+			width: 170px;
 		}
 
-		@media all and (min-width: $xl) {
-			font-size: 20px;
+		@media all and (min-width: $xxl) {
+			width: 210px;
+			font-size: 24px;
 		}
 
 	}
@@ -455,19 +456,31 @@
 
 		@media all and (min-width: $md) {
 			display: flex;
+			justify-content: center;
 			padding: 5px;
 			background: $silv;
 			color: $white;
 			border-radius: 8px;
 			font-size: 12px;
+			margin: 0 10px;
 		}
 
 		@media all and (min-width: 900px) {
 			font-size: 14px;
 		}
 
+		@media all and (min-width: $lg) {
+			width: 194px;
+			margin: 0 25px;
+		}
+
 		@media all and (min-width: $xl) {
-			font-size: 20px;
+			font-size: 17px;
+			width: 234px;
+		}
+
+		@media all and (min-width: $xl) {
+			font-size: 15px;
 		}
 	}
 }

@@ -1,15 +1,31 @@
 .header-top {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .header-top-socials {
     display: none;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 25px;
+    justify-content: center;
 
     @media all and (min-width: $md) {
         display: flex;
+        margin-right: 10px;
+        width: 168px;
+    }
+
+    @media all and (min-width: 900px) {
+        width: 194px;
+    }
+
+    @media all and (min-width: $lg) {
+        margin-right: 25px;
+    }
+
+    @media all and (min-width: $xl) {
+        width: 234px;
     }
 
     a {
@@ -24,25 +40,36 @@
 .header-mail {
     display: none;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: 15px;
 
     @media all and (min-width: $md) {
         display: flex;
+        width: 138px;
+        font-size: 12px;
+    }
+
+    @media all and (min-width: $lg) {
+        width: 170px;
+        font-size: 14px;
     }
 
     @media all and (min-width: $xl) {
-        font-size: 20px
+        font-size: 16px
+    }
+
+    @media all and (min-width: $xxl) {
+        width: 210px;
+        font-size: 18px;
     }
 
     img {
-        max-width: 50%;
+        max-width: 60%;
 
-        @media all and (min-width: $xl) {
+        @media all and (min-width: $lg) {
 			max-width: 100%;
-            margin-right: 10px;
+            margin-right: 5px;
 		}
-        // margin-right: 10px;
     }
 }
 
@@ -99,7 +126,6 @@
     }
 
     @media all and (min-width: $xl) {
-        display: inline-block;
         font-size: 20px;
     }
 }
