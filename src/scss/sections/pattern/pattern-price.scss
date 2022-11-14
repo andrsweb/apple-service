@@ -26,6 +26,7 @@
 
     &-col-name {
         display: flex;
+        justify-content: center;
 
         &:first-child {
             width: 40%;
@@ -56,6 +57,7 @@
     &-col {
         display: flex;
         font-size: 10px;
+        justify-content: center;
 
         @media all and (min-width: $sm) {
             font-size: 14px;

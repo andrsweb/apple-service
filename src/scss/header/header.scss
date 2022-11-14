@@ -285,7 +285,12 @@
 
 			&:nth-child(3) .header-submenu {
 				li {
-					width: 16.66%;
+					text-align: center;
+					width: 50%;
+
+					@media all and (min-width: $md) {
+						width: 33.333%;
+					}
 				}
 			}
 
