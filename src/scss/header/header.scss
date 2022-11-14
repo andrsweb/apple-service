@@ -11,15 +11,19 @@
 
 		&.scrolled {
 			box-shadow: 1px 1px 6px 1px #f3ececef;
-			padding: 4px 0;
+			padding: 15px 0;
 
 			@media all and (min-width: $md) {
-				padding: 15px;
+				padding: 15px 0;
 			}
 		}
 
 	.container {
 		max-width: 1200px;
+	}
+
+	&-wrapper {
+		// padding: 5px 0;
 	}
 
 	&-submenu-links {
