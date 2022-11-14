@@ -83,3 +83,24 @@
     }
 }
 
+.area {
+    margin: 0 auto;
+    display: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration:underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    @media all and (min-width: $md) {
+        display: inline-block;
+    }
+
+    @media all and (min-width: $xl) {
+        display: inline-block;
+        font-size: 20px;
+    }
+}
+

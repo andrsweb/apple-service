@@ -44,7 +44,7 @@
         margin-bottom: 30px;
 
         @media all and (min-width: $md) {
-            width: 35%;
+            width: 30%;
             align-items: flex-start;
             text-align: left;
         }
@@ -57,7 +57,7 @@
         align-items: center;
 
         @media all and (min-width: $md) {
-            width: 15%;
+            width: 20%;
             align-items: flex-start;
         }
     }
@@ -89,10 +89,6 @@
     .header-menu {
         width: 100%;
         margin: 20px 0;
-
-        @media all and (min-width: $md) {
-            width: 100%;
-        }
     }
 
     .header-menu-list {
