@@ -28,16 +28,11 @@
             width: 50%
         }
 
-        img {
-            width: 50%;
-
-            @media all and (min-width: $sm) {
-                width: 40%
-            }
-
-            @media all and (min-width: $md) {
-                width: 50%
-            }
+        iframe {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 10px;
+            border: 0;
         }
     }
 
