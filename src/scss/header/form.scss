@@ -1,0 +1,135 @@
+.form-wrapper {
+	position:fixed;
+	display:none;
+	align-items:center;
+	justify-content:center;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	z-index: 200;
+	overflow-y: auto;
+	padding: 20px;
+	background: #c7c5c58e;
+
+	&.opened {
+		display: flex;
+	}
+
+	.form {
+		position: relative;
+		width: 100%;
+		max-width: 500px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 20px 0;
+		margin: auto 0;
+		border-radius: 14px;
+		background: rgb(255, 249, 249);
+		box-shadow: 4px 3px 20px -1px rgba(126, 125, 125, 0.897);
+
+        &.success {
+            padding: 20px;
+            color: $white;
+            text-align: center;
+        }
+
+        &-response {
+            text-align: center;
+            font-size: 15px;
+            margin-top: 10px;
+            color: $white;
+        }
+	}
+
+	.legend {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+        align-items: center;
+		font-family: $ff;
+		font-weight: $fw-bold;
+		font-size: 12px;
+		line-height: $lh;
+		color: $jet;
+		padding: 0 20px 20px 20px;
+	}
+
+	fieldset {
+        padding: 40px;
+		font-family: $ff;
+		font-weight: $fw-regular;
+		display: flex;
+		flex-direction: column;
+		border: 0;
+        width: 100%;
+	}
+
+	input {
+		font-family: $ff;
+		font-weight: $fw-regular;
+		font-size: 14px;
+		height: 38px;
+		width: 100%;
+		margin-bottom: 15px;
+		border-radius: 14px;
+		padding-left: 10px;
+		transition: box-shadow ease $tr;
+		color: $jet;
+		border: 0;
+		background: rgb(245, 241, 241);
+
+		&::placeholder {
+			opacity: 1;
+		}
+
+		&:focus {
+			box-shadow: 0px 0px 5px 1px $accent;
+		}
+	}
+
+	textarea {
+		font-family: $ff;
+		font-weight: $fw-regular;
+		font-size: 14px;
+		min-height: 90px;
+		resize: none;
+		border: 0;
+		padding: 10px 0 0 10px;
+		transition: box-shadow ease $tr;
+		color: $jet;
+        border-radius: 14px;
+		background: rgb(245, 241, 241);
+
+		&:focus {
+			box-shadow: 0px 0px 5px 1px $accent;
+		}
+
+		&::placeholder {
+			opacity: 1;
+		}
+	}
+
+	label {
+		font-family: $ff;
+		font-weight: $fw-light;
+		font-size: 12px;
+
+		a {
+			color: rgb(78, 115, 172);
+			transition: ease $tr;
+
+			&:hover {
+				color: $accent;
+				opacity: $op;
+			}
+		}
+	}
+	.button {
+		border-radius: 14px;
+	}
+}
+
+

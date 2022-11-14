@@ -1,3 +1,4 @@
+@import '../../node_modules/swiper/swiper-bundle.min';
 // Defaults styles.
 @import 'common/fonts';
 @import 'common/vars';
@@ -5,11 +6,71 @@
 @import 'common/grid';
 @import 'common/base';
 
+//pattern styles
+
+@import 'sections/feedback';
+@import 'sections/alert/alert';
+@import 'sections/bottom-form/bottom-form';
+
+
 // Header styles.
 @import 'header/header';
+@import 'header/form';
+@import 'header/header-top';
 
 // Footer styles.
 @import 'footer/footer';
+@import 'footer/footer-nav';
 
 // Home page sections styles.
 @import 'sections/home/hero';
+@import 'sections/home/change-glass';
+@import 'sections/home/popular';
+@import 'sections/home/accessories';
+@import 'sections/home/stat';
+@import 'sections/home/process';
+@import 'sections/home/service-area';
+@import 'sections/home/advantages';
+
+//delivery styles
+@import 'sections/delivery/delivery';
+@import 'sections/delivery/before';
+
+//sales styles
+
+@import 'sections/sales/sales';
+@import 'sections/sales/sales-items';
+
+//garranty styles
+@import 'sections/garranty/garranty';
+
+//about styles
+@import 'sections/about/about';
+
+//contacts styles
+@import 'sections/contacts/contacts';
+@import 'sections/contacts/maps';
+
+//pattern styles
+@import 'sections/pattern/pattern-main';
+@import 'sections/pattern/pattern-counts';
+@import 'sections/pattern/pattern-broken';
+@import 'sections/pattern/pattern-advantages';
+@import 'sections/pattern/pattern-price';
+@import 'sections/pattern/pattern-work';
+@import 'sections/pattern/pattern-testimonials';
+
+//service-area styles
+
+@import 'sections/service-area/service-area';
+
+//repair-metro styles
+
+@import 'sections/repair-metro/repair-metro';
+
+//buttons
+@import 'common/buttons.scss';
+
+//breadcrumbs
+
+@import 'sections/breadcrumbs/breadcrumbs';

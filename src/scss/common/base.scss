@@ -10,26 +10,35 @@ body, html {
 }
 
 body {
+	font-family: $ff;
 	position: relative;
 	min-width: 300px;
 	display: flex;
 	height: auto;
-	font-family: $ff;
 	font-size: $fs-md;
 	line-height: $lh;
 	color: $black;
-	background-color: $white
+	background-color: $main;
 }
 
 img {
 	max-width: 100%;
-	height: auto
+	height: auto;
 }
 
 ul {
 	margin: 0;
 	padding: 0;
 	list-style: none
+}
+
+a {
+	color: $jet;
+}
+
+picture {
+	display: flex;
+	justify-content: center;
 }
 
 .wrapper {

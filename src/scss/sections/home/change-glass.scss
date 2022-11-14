@@ -1,0 +1,59 @@
+.change-glass {
+	padding: 20px 0; //50
+
+	@media all and (min-width: $md) {
+		padding: 50px 0;
+	}
+
+	.container {
+		max-width: 1200px;
+	}
+
+	&-items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+	}
+
+	&-item {
+		padding: 0 10px;
+		width: calc( 100% / 1 );
+		margin-bottom: 30px;
+		transition: opacity ease $tr;
+
+		@media all and (min-width: $sm) {
+			width: calc( 100% / 2);
+		}
+
+		@media all and (min-width: $md) {
+			width: calc( 100% / 4 );
+		}
+
+		&:hover {
+			opacity: $op;
+		}
+
+		&-inner {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&-title {
+		font-family: $ff;
+		font-size: 15px;
+		margin-bottom: 10px;
+	}
+
+	&-img {
+		margin-bottom: 20px;
+	}
+
+	&-price {
+		font-family: $ff;
+		text-decoration: underline;
+	}
+}

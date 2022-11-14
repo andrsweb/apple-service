@@ -1,0 +1,32 @@
+.feedback {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&-wrapper {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	@media all and (min-width: $m) {
+		flex-direction: row;
+	}
+
+	&-inner-left {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 30px;
+
+		@media all and (min-width: $m) {
+			margin-bottom: 0;
+			margin-right: 50px;
+        }
+	}
+
+	.feedback-link {
+		font-family: $ff;
+		font-size: 25px;
+	}
+}

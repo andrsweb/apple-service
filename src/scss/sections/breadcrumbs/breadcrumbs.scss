@@ -1,0 +1,20 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .main, .current {
+        color: $jet;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .arrow {
+        margin: 0 3px;
+        width: 7px;
+        height: 7px;
+        border-right: 3px solid $jet;
+        border-bottom: 3px solid $jet;
+        transform: rotate( -45deg );
+    }
+}

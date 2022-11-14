@@ -1,0 +1,101 @@
+.popular {
+    padding: 50px 0;
+
+    .container {
+        max-width: 1200px;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        @media all and (min-width: $md) {
+            flex-direction: row;
+            margin-bottom: 50px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &-table {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        order: 2;
+
+        @media all and (min-width: $md) {
+            width: 70%;
+            order: 1;
+        }
+    }
+
+    &-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        order: 1;
+
+        @media all and (min-width: $md) {
+            width: 30%;
+            order: 2;
+        }
+    }
+
+    &-row-title {
+        display: flex;
+        margin-bottom: 20px;
+        font-size: 15px;
+
+        @media all and (min-width: $lg) {
+            font-size: 18px;
+        }
+    }
+
+    &-col-name {
+        display: flex;
+        justify-content: center;
+
+        &:first-child {
+            width: 30%;
+        }
+
+        &:nth-child(2){
+            width: 40%;
+        }
+
+        &:last-child {
+            width: 30%;
+        }
+    }
+
+    &-row {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &-col {
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+
+        @media all and (min-width: $lg) {
+            font-size: 15px;
+        }
+
+        &:first-child {
+            width: 30%;
+        }
+
+        &:nth-child(2){
+            width: 40%;
+        }
+
+        &:last-child {
+            width: 30%;
+        }
+    }
+}
