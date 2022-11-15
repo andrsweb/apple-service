@@ -49,6 +49,7 @@
 
         img {
             max-width: 50%;
+            margin: 0 auto;
 
             @media all and (min-width: $md) {
                 max-width: 100%;

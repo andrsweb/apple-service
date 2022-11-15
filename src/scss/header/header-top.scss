@@ -7,12 +7,11 @@
 .header-top-socials {
     display: none;
     align-items: center;
-    margin-right: 25px;
     justify-content: center;
 
     @media all and (min-width: $md) {
         display: flex;
-        margin-right: 10px;
+        margin: 0 10px;
         width: 168px;
     }
 
@@ -21,7 +20,7 @@
     }
 
     @media all and (min-width: $lg) {
-        margin-right: 25px;
+        margin: 0 25px;
     }
 
     @media all and (min-width: $xl) {
@@ -30,8 +29,6 @@
 
     a {
         margin-right: 10px;
-        width: 35px;
-        height: 35px;
 
         &:last-child {
             margin-right: 0;

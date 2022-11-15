@@ -23,6 +23,10 @@
         @media all and (min-width: $md) {
             width: 50%;
         }
+
+        img {
+            margin: 0 auto;
+        }
     }
 
     &-complex-text-wrapper {

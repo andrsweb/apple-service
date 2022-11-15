@@ -23,37 +23,52 @@
 	}
 
 	&-submenu-links {
-		padding: 10px;
-		background: $main;
-		position: absolute;
 		display: none;
-		top: 120%;
-		right: 52%;
-		transform: translateX( 50% );
-		border-radius: 5px;
-		box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+		width: 303px;
 
 		@media all and (min-width: $md) {
-			display: flex;;
+			display: flex;
+		}
+
+		@media all and (min-width: 900px) {
+			width: 358px;
+		}
+
+		@media all and (min-width: $lg) {
+			width: 398px;
+		}
+
+		@media all and (min-width: $xl) {
+			width: 491px;
+		}
+
+		&.burger-links {
+			@media all and (min-width: $md) {
+				display: none;
+			}
 		}
 	}
 
 	&-submenu-link {
-		margin-right: 20px;
+		margin-right: 10px;
 		font-size: 20px;
 		white-space: nowrap;
 		color: $jet;
 
 		@media all and (min-width: $md) {
-			font-size: 12px;
+			font-size: 10px;
 		}
 
 		@media all and (min-width: 900px) {
-			font-size: 15px;
+			font-size: 12px;
 		}
 
 		@media all and (min-width: $lg) {
-			font-size: 15px;
+			font-size: 13px;
+		}
+
+		@media all and (min-width: $xl) {
+			font-size: 17px;
 		}
 
 		&:last-child {
@@ -248,11 +263,14 @@
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
-		opacity: 0;
-		visibility: hidden;
 		z-index: -10;
 		transition: opacity ease-out $tr;
 		position: relative;
+
+		@media all and (min-width: $md) {
+			opacity: 0;
+			visibility: hidden;
+		}
 
 		li {
 			width: 14%;
