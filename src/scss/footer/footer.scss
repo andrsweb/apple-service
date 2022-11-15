@@ -164,3 +164,42 @@
 		font-size: 14px;
 	}
 }
+
+.fixed-button {
+	font-family: $ff;
+	font-size: 12px;
+	padding: 10px;
+	display: block;
+	position: fixed;
+	bottom: 10%;
+	right: 8%;
+	background: #66ad80;
+	border: 2px solid $jet;
+	z-index: 50;
+	border-radius: 10px;
+	color: $white;
+	animation: cycle 3s linear infinite;
+
+	@keyframes cycle {
+		35% {transform: rotate(0) translate(0, 0);}
+		40% {transform: rotate(3deg) translate(0, -2px);}
+		45% {transform: rotate(-1deg) translate(0, -2px);}
+		50% {transform: rotate(3deg) translate(0, -2px);}
+		55% {transform: rotate(-1deg) translate(0, -2px);}
+		60% {transform: rotate(3deg) translate(0, -2px);}
+		65% {transform: rotate(-1deg) translate(0, -2px);}
+		70% {transform: rotate(0) translate(0, 0);}
+	}
+
+	@media all and (min-width: $m) {
+		font-size: 14px;
+	}
+
+	@media all and (min-width: $lg) {
+		font-size: 16px;
+	}
+
+	@media all and (min-width: $xl) {
+		font-size: 18px;
+	}
+}
