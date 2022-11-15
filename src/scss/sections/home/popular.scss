@@ -88,6 +88,8 @@
 
         &:first-child {
             width: 30%;
+            display: flex;
+            justify-content: flex-start;
         }
 
         &:nth-child(2){
