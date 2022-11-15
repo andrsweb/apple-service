@@ -162,7 +162,8 @@
 		}
 
 		&.opened {
-			overflow-y: auto;
+			overflow-y: scroll;
+			-webkit-overflow-scrolling: touch;
 			padding: 20px 0;
 			transition: opacity ease $tr;
 			opacity: 1;
