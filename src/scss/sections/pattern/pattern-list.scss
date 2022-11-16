@@ -1,0 +1,51 @@
+.pattern-list {
+    padding: 10px 0;
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .pattern-text {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    &-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &-item {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        font-size: 14px;
+
+        @media all and (min-width: $m) {
+            font-size: 16px;
+        }
+
+        @media all and (min-width: $lg) {
+            font-size: 18px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY( -50% );
+            width: 15px;
+            height: 15px;
+            background: $jet;
+            border-radius: 5px;
+        }
+    }
+}
