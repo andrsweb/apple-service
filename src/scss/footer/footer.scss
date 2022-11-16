@@ -171,14 +171,16 @@
 	padding: 10px;
 	display: block;
 	position: fixed;
-	bottom: 10%;
+	bottom: 5%;
 	right: 8%;
 	background: #66ad80;
-	border: 2px solid $jet;
+	border: 1px solid $jet;
 	z-index: 50;
 	border-radius: 10px;
 	color: $white;
 	animation: cycle 3s linear infinite;
+	cursor: pointer;
+	box-shadow: 5px 8px 14px rgba(2, 68, 13, 0.678);
 
 	@keyframes cycle {
 		35% {transform: rotate(0) translate(0, 0);}
@@ -195,11 +197,34 @@
 		font-size: 14px;
 	}
 
+	@media all and (min-width: $md) {
+		bottom: 10%;
+	}
+
 	@media all and (min-width: $lg) {
 		font-size: 16px;
 	}
 
 	@media all and (min-width: $xl) {
 		font-size: 18px;
+	}
+
+	&.mob {
+
+		a {
+			color: $white;
+		}
+
+		@media all and (min-width: $md) {
+			display: none;
+		}
+	}
+
+	&.desk {
+		display: none;
+
+		@media all and (min-width: $md) {
+			display: block;
+		}
 	}
 }
