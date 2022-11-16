@@ -20,73 +20,76 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="container">
-				@@include( 'header-top.html' )
-				<div class="header-wrapper">
+				<div class="header-main-wrapper">
 					<a href="/" class="header-logo">
 						<p class="header-logo-text">
 							APP <span>CENTER</span>
 						</p>
 						<img src="img/header/logo.png" width="85" height="85" alt="">
 					</a>
-					<div class="header-menu-wrapper" id="body-lock">
-						<div class="burger-icons-wrapper">
-							<div class="burger-top">
-								<a href="#">
-									<img src="img/header/ok.png" width="25" height="25" alt="">
-								</a>
-								<a href="#">
-									<img src="img/header/fb.png" width="25" height="25" alt="">
-								</a>
-								<a href="#">
-									<img src="img/header/yt.png" width="25" height="25" alt="">
-								</a>
-								<a href="#">
-									<img src="img/header/vk.png" width="25" height="25" alt="">
-								</a>
-								<a href="#">
-									<img src="img/header/tw.png" width="25" height="25" alt="">
+					<div class="header-wrapper">
+						@@include( 'header-top.html' )
+						<div class="header-menu-wrapper" id="body-lock">
+							<div class="burger-icons-wrapper">
+								<div class="burger-top">
+									<a href="#">
+										<img src="img/header/ok.png" width="25" height="25" alt="">
+									</a>
+									<a href="#">
+										<img src="img/header/fb.png" width="25" height="25" alt="">
+									</a>
+									<a href="#">
+										<img src="img/header/yt.png" width="25" height="25" alt="">
+									</a>
+									<a href="#">
+										<img src="img/header/vk.png" width="25" height="25" alt="">
+									</a>
+									<a href="#">
+										<img src="img/header/tw.png" width="25" height="25" alt="">
+									</a>
+								</div>
+								<a class="header-mail-burger" href="mailto:info@appsgrade.ru">
+									<img src="img/header/mail.png" width="30" height="30" alt="">
+									appcenters@mail.ru
 								</a>
 							</div>
-							<a class="header-mail-burger" href="mailto:info@appsgrade.ru">
-								<img src="img/header/mail.png" width="30" height="30" alt="">
-								appcenters@mail.ru
-							</a>
+							<ul class="header-submenu-links burger-links">
+								<li class="header-submenu-link">
+									<a href="delivery.html">Выезд мастера</a>
+								</li>
+								<li class="header-submenu-link">
+									<a href="sales.html">Акции</a>
+								</li>
+								<li class="header-submenu-link">
+									<a href="garranty.html">Гарантии</a>
+								</li>
+								<li class="header-submenu-link">
+									<a href="about.html">О компании</a>
+								</li>
+								<li class="header-submenu-link">
+									<a href="contacts.html">Контакты</a>
+								</li>
+								<li class="header-submenu-link mob">
+									<a href="service-area.html">Зона обслуживания</a>
+								</li>
+							</ul>
+							@@include( 'header-nav.html')
+							<p class="header-work">
+								Работаем с 9-00 до 22-00
+							</p>
+							<div class="header-contacts">
+								<a href="tel:84957977375" class="header-contacts-phone">8 (495) 797-73-75</a>
+								<a href="tel:88007777375" class="header-contacts-phone">8 (800) 777-73-75</a>
+								<button class="header-button open-form">
+									Обратный звонок
+								</button>
+							</div>
 						</div>
-						<ul class="header-submenu-links burger-links">
-							<li class="header-submenu-link">
-								<a href="delivery.html">Выезд мастера</a>
-							</li>
-							<li class="header-submenu-link">
-								<a href="sales.html">Акции</a>
-							</li>
-							<li class="header-submenu-link">
-								<a href="garranty.html">Гарантии</a>
-							</li>
-							<li class="header-submenu-link">
-								<a href="about.html">О компании</a>
-							</li>
-							<li class="header-submenu-link">
-								<a href="contacts.html">Контакты</a>
-							</li>
-							<li class="header-submenu-link mob">
-								<a href="service-area.html">Зона обслуживания</a>
-							</li>
-						</ul>
-						@@include( 'header-nav.html')
-						<p class="header-work">
-							Работаем с 9-00 до 22-00
-						</p>
-						<div class="header-contacts">
-							<a href="tel:84957977375" class="header-contacts-phone">8 (495) 797-73-75</a>
-							<a href="tel:88007777375" class="header-contacts-phone">8 (800) 777-73-75</a>
-							<button class="header-button open-form">
-								Обратный звонок
-							</button>
+						<div class="burger-button">
+							<span></span>
 						</div>
-					</div>
-					<div class="burger-button">
-						<span></span>
 					</div>
 				</div>
+				
 			</div>
 		</header>

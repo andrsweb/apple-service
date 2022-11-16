@@ -140,11 +140,17 @@
 
 	&-wrapper {
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
 
 		@media all and (min-width: $md) {
 			position: relative;
 		}
+	}
+
+	&-main-wrapper {
+		display: flex;
+		justify-content: space-between;
 	}
 
 	&-menu-wrapper {
@@ -171,7 +177,7 @@
 			right: 0;
 			top: 70px;
 			background: rgb(230, 228, 228);
-			width: 70%;
+			width: 85%;
 			height: calc( 100% - 70px);
 			justify-content: center;
 			align-items: flex-start;
